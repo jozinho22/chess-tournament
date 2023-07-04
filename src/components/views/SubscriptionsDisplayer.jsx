@@ -5,28 +5,15 @@ import CustomInput from '../CustomInput';
 import AppContext from '../context/AppContext';
 import {PlusCircle, Pencil} from 'react-bootstrap-icons'
 
-const SubscriptionsDisplayer = ( {players, setPlayers} ) => {
+const SubscriptionsDisplayer = ( {players, setPlayers, id, setId} ) => {
 
     const [addPlayerOk, setAddPlayerOk] = React.useState(false);
     
     const [player, setPlayer] = React.useState({});
-    const [id, setId] = React.useState(0);
-
-    const [gameOk, setGameOk] = React.useState(false);
-
+    
     const {setViewType} = React.useContext(AppContext);
 
     var width = document.body.offsetWidth;
-
-
-    const processGame = () => {
-        /* if(gameOk) {
-            var u = {...user};
-            u.choices.push(0);
-            setUser(u);
-            next();
-        } */
-    }
 
     const addPlayer = () => {
         if(addPlayerOk) {
@@ -46,8 +33,8 @@ const SubscriptionsDisplayer = ( {players, setPlayers} ) => {
                     
                     <div className="SubscriptionsContainer">
                          <>
-                            <CustomInput setAddPlayerOk={setAddPlayerOk} addPlayer={addPlayer} displayPlayers={displayPlayers} setPlayer={setPlayer} players={players} processGame={processGame} />
-                            <div className="PlayerButton">
+                            <CustomInput setAddPlayerOk={setAddPlayerOk} addPlayer={addPlayer} displayPlayers={displayPlayers} setPlayer={setPlayer} players={players} />
+                            <div className="AlignedButton">
                                 <Button className="AddPlayerButton" onClick={addPlayer}>
                                     <PlusCircle /> {width > 450 ? "Ajouter le joueur" : ""}
                                 </Button>

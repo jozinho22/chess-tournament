@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 
 const SideButton = ( {action, icon, type, title} ) => {
 
-    let width = document.getElementsByClassName("App")[0].offsetWidth;
+    let width = document.body.offsetWidth;
 
     return  <Button className={`${type}Button`} onClick={action}>
                 <div className="Icon"> 

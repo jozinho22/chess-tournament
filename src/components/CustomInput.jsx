@@ -38,7 +38,7 @@ const CustomInput = ( props ) => {
             props.setPlayer(
                 {
                     pseudo: pseudo,
-                    elo: elo
+                    elo: parseInt(elo)
                 }
             )
         }

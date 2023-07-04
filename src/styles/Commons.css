@@ -1,19 +1,22 @@
 h1 {
     text-decoration: underline;
     margin-bottom: 40px;
-    font-size: x-large;
+    font-size: 30px;
 }
 
 h2 {
     margin-bottom: 40px;
-    font-size: large;
+    font-size: 20px;
 }
 
-.SubscriptionsDisplayerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
+@media (width < 450px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
 }
 
 .SubscriptionsContainer {
@@ -48,10 +51,8 @@ h2 {
 
 /* Buttons */
 
-
-
 .btn {
-    font-size: 20px !important;
+    font-size: 25px !important;
     color: rgb(207, 199, 199) !important;
     padding: 10px;
 }
@@ -62,10 +63,11 @@ h2 {
     }
 }
 
-.PlayerButton {
+.AlignedButton {
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 40px;
 }
 
 .AddPlayerButton, .EditPlayersButton , .StartButton {
@@ -87,9 +89,9 @@ h2 {
     border-color: rgb(64, 105, 66);
 }
 
-.EditPlayersButton:hover {
+.EditPlayersButton:hover, .EditPlayersButton:focus {
     background-color: rgb(50, 75, 51) ; 
-     border-color: rgb(50, 75, 51); 
+    border-color: rgb(50, 75, 51); 
 }
 
 @media (width < 450px) {
@@ -104,7 +106,7 @@ h2 {
     padding: 10px 30px 25px 30px !important;
 }
 
-.StartButton:hover {
+.StartButton:hover, .StartButton:focus {
     background-color: rgb(52, 75, 110) ;
     border-color: rgb(52, 75, 110) ;
 }
@@ -114,7 +116,7 @@ h2 {
     border-color: rgb(170, 150, 60);
 }
 
-.ReturnButton:hover {
+.ReturnButton:hover, .ReturnButton:focus {
     background-color: rgb(126, 112, 53);
     border-color: rgb(126, 112, 53);
 }
@@ -211,9 +213,8 @@ h2 {
 }
 
 .CustomInputAlert {
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: -30%;
 }
 
 .CustomInputAlert p {
@@ -222,9 +223,6 @@ h2 {
 }
 
 @media (width < 450px) {
-    .CustomInputAlert {
-        bottom: -15%;
-    }
     .CustomInputAlert p {
        font-size: 14px;
     }
@@ -258,7 +256,6 @@ h2 {
     position: relative;
 }
 
-
 .GameDisplayerContainer.Blur {
     filter: blur(10px);
 }
@@ -282,8 +279,6 @@ h2 {
     font-size: x-large;
 }
 
-
-
 .Focus {
     box-shadow: 0px 10px 10px 10px rgb(25, 148, 74);
     border-radius: 5px;
@@ -293,7 +288,6 @@ h2 {
 .Clickable {
     cursor: pointer;
 }
-
 
 /* .Icon svg {
     display: block;

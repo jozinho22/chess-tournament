@@ -8,9 +8,15 @@ const PlayersEdit = ({players, setPlayers}) => {
         setPlayers(playersCopy)
     }
 
+    const deleteAllPlayers = () => {
+        let playersCopy = [...players];
+        playersCopy.splice(0, playersCopy.length);
+        setPlayers(playersCopy)
+    }
+
     return  <>
                 <h1>Modifier les joueurs </h1>
-                <PlayersEditTable players={players} deletePlayer={deletePlayer} />    
+                <PlayersEditTable players={players} deletePlayer={deletePlayer} deleteAllPlayers={deleteAllPlayers} />    
             </>
 
 }

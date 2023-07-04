@@ -16,7 +16,7 @@ const AppManager = () => {
     const [user, setUser] = React.useState({});
 
     const [players, setPlayers] = React.useState([]);
-
+    const [id, setId] = React.useState(0);
     const {viewType, setViewType} = React.useContext(AppContext);
 
     const goBack = () => {
@@ -35,18 +35,20 @@ const AppManager = () => {
                             :   viewType === EnumViewType.SUBSCRIPTIONS ?
                                     <SubscriptionsDisplayer 
                                         players={players} 
-                                        setPlayers={setPlayers} />
+                                        setPlayers={setPlayers}
+                                        id={id}
+                                        setId={setId} />
 
                                                 :   viewType === EnumViewType.PLAYERS_EDIT ? 
                                                         <PlayersEdit players={players} setPlayers={setPlayers} />
                                                             
                                                             :   viewType === EnumViewType.GAME ? 
-                                                                        <GameDisplayer />
+                                                                        <GameDisplayer players={players} />
                                                                                 :   <></>
                                 
                 }
                 {
-                    viewType !== EnumViewType.WELCOME ?
+                    viewType !== EnumViewType.WELCOME && viewType !== EnumViewType.GAME ?
                         <Container className="LeftButtonsContainer">
                             <SideButton action={goBack} icon={<ChevronLeft />} type={EnumButtonType.RETURN} title={"Go back"} />
                         </Container>
