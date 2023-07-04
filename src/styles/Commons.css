@@ -1,0 +1,360 @@
+h1 {
+    text-decoration: underline;
+    margin-bottom: 40px;
+    font-size: x-large;
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: large;
+}
+
+.SubscriptionsDisplayerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.SubscriptionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
+
+.OptionButton {
+    padding: 10px 10px 20px 10px;
+    font-size: large;
+    width: 200px; 
+}
+
+@media (width < 450px) {
+    .OptionButton { 
+        width: 150px; 
+    }
+}
+
+/* .SubscriptionsTitle {
+    margin-top: 20px;
+} */
+
+.SubscriptionsTitle p {
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+
+/* Buttons */
+
+
+
+.btn {
+    font-size: 20px !important;
+    color: rgb(207, 199, 199) !important;
+    padding: 10px;
+}
+
+@media (width < 450px) {
+    .btn {
+       font-size: 13px !important;
+    }
+}
+
+.PlayerButton {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.AddPlayerButton, .EditPlayersButton , .StartButton {
+    padding-bottom: 20px; 
+}
+
+.AddPlayerButton {
+    background-color: rgb(64, 105, 66); 
+    border-color: rgb(64, 105, 66);
+}
+
+.AddPlayerButton:hover {
+    background-color: rgb(50, 75, 51);  
+    border-color: rgb(50, 75, 51);
+}
+
+.EditPlayersButton {
+    background-color: rgb(64, 105, 66) ; 
+    border-color: rgb(64, 105, 66);
+}
+
+.EditPlayersButton:hover {
+    background-color: rgb(50, 75, 51) ; 
+     border-color: rgb(50, 75, 51); 
+}
+
+@media (width < 450px) {
+    .AddPlayerButton svg, .EditPlayersButton svg {
+       width: 30px;
+    }
+}
+
+.StartButton {
+    background-color: rgb(61, 103, 167) ;
+    border-color: rgb(61, 103, 167) ;
+    padding: 10px 30px 25px 30px !important;
+}
+
+.StartButton:hover {
+    background-color: rgb(52, 75, 110) ;
+    border-color: rgb(52, 75, 110) ;
+}
+
+.ReturnButton {
+    background-color: rgb(170, 150, 60);
+    border-color: rgb(170, 150, 60);
+}
+
+.ReturnButton:hover {
+    background-color: rgb(126, 112, 53);
+    border-color: rgb(126, 112, 53);
+}
+
+.LeftButtonsContainer { 
+    width: fit-content;
+    position: absolute;
+    left: 10%;
+}
+
+.RightButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    right: 10%;
+    align-items: flex-end; 
+    width: fit-content;
+    /* z-index: 1; */
+}
+
+.LeftButtonsContainer button, .RightButtonsContainer button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.LeftButtonsContainer svg, .RightButtonsContainer svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (width < 950px) {
+    .LeftButtonsContainer { 
+        left: 5%;
+    }
+    .RightButtonsContainer { 
+        right: 5%;
+    }
+}
+
+@media (width < 450px) {
+    .LeftButtonsContainer svg, .RightButtonsContainer svg {
+        width: 10px;
+        height: 10px;
+    }
+    .LeftButtonsContainer { 
+        left: 0;
+    }
+    .RightButtonsContainer { 
+        right: 0;
+    }
+}
+
+
+/* Input */
+.CustomInputContainer {
+    width: 50%;
+}
+
+@media (width < 450px) {
+    .CustomInputContainer {
+        width: 70%;
+    }
+    .CustomInputTitle, .CustomInput {
+        font-size: 13px ! important;
+    }
+}
+
+.CustomInputTitle, .CustomInput {
+    /* font-size: 25px; */
+    padding-bottom: 20px;
+}
+
+.CustomInputGroup {
+    width: 400px;
+    margin: 0 auto;
+}
+
+@media (width < 450px) {
+    .CustomInputGroup {
+        width: 220px;
+    }
+}
+
+.CustomInput {
+    background-color: rgb(131, 134, 136); 
+    line-height: 2;
+}
+
+.CustomInput:focus {
+    background-color: rgb(131, 134, 136); 
+}
+
+.CustomInputAlert {
+    position: absolute;
+    width: 100%;
+    bottom: -30%;
+}
+
+.CustomInputAlert p {
+    color: rgb(126, 112, 53);
+    font-size: 22px;
+}
+
+@media (width < 450px) {
+    .CustomInputAlert {
+        bottom: -15%;
+    }
+    .CustomInputAlert p {
+       font-size: 14px;
+    }
+}
+
+/* Players List */
+.PlayersList {
+    width: fit-content;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (width < 450px) {
+    .PlayersList {
+        font-size: 17px;
+    }
+}
+
+.PlayersList p {
+    display: inline;
+}
+
+/* Game displayer */
+.GameDisplayerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+}
+
+
+.GameDisplayerContainer.Blur {
+    filter: blur(10px);
+}
+
+.SoftBlur {
+    filter: blur(2px);
+}
+
+.Hidden {
+    display: none;
+}
+
+.btn:disabled {
+    background-color: inherit;
+    border-color: inherit;
+}
+
+.GameDisplayerButton {
+    padding: 20px;
+    height: 30vh;
+    font-size: x-large;
+}
+
+
+
+.Focus {
+    box-shadow: 0px 10px 10px 10px rgb(25, 148, 74);
+    border-radius: 5px;
+    height: 50px;
+}
+
+.Clickable {
+    cursor: pointer;
+}
+
+
+/* .Icon svg {
+    display: block;
+} */
+
+@media (width < 450px) {
+    .Icon svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Tables */
+.table {
+    --bs-table-bg: grey !important;
+    --bs-table-color: black;
+}
+
+.table-responsive {
+    max-height: 100vh;;
+} 
+
+.NiceTableContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: 40%;
+    overflow-x: auto !important;
+    overflow-y: auto !important;
+}
+
+@media (width < 450px) {
+    .NiceTableContainer {
+        width: 90%;
+        font-size: 15px;
+    }
+}
+
+.NiceTableContainer .row {
+    flex-wrap: nowrap;
+}
+
+@media(min-width: 450px) {
+    .NiceTableContainer {
+        margin-bottom: 40px;
+    }
+}
+
+.NiceTableContainer tr {
+    vertical-align: middle;
+}
+
+.NiceTableContainer th, .NiceTableContainer td {
+    padding: 10px;
+}
+
+.NiceTableContainer thead th, .NiceTableContainer thead td {
+    border: solid green 2px;  
+}
+
+.NiceTableContainer tbody th, .NiceTableContainer tbody td {
+    border: solid rgb(91, 129, 91) 2px;  
+}
